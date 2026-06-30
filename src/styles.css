@@ -1,0 +1,56 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f8fafc;
+  background: #020617;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at top left, #1d4ed8 0, transparent 32rem), radial-gradient(circle at top right, #059669 0, transparent 28rem), #020617; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .65; }
+
+.app-shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 64px; }
+.center-screen { min-height: 100vh; display: grid; place-items: center; }
+.hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(320px, .7fr); gap: 24px; align-items: stretch; margin-bottom: 24px; }
+.hero-copy, .glass-card, .status-card, .mini-card { border: 1px solid rgba(255,255,255,.12); background: rgba(15,23,42,.72); box-shadow: 0 24px 70px rgba(0,0,0,.32); backdrop-filter: blur(18px); border-radius: 28px; }
+.hero-copy { padding: 40px; }
+.hero-copy h1 { font-size: clamp(2.2rem, 5vw, 4.6rem); line-height: .97; margin: 16px 0; letter-spacing: -0.06em; }
+.hero-copy p { max-width: 740px; color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; background: rgba(59,130,246,.18); border: 1px solid rgba(96,165,250,.25); color: #bfdbfe; border-radius: 999px; font-weight: 800; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.primary-btn, .secondary-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 15px; border: 0; padding: 11px 18px; font-weight: 900; transition: .2s ease; }
+.primary-btn { background: linear-gradient(135deg, #2563eb, #10b981); color: white; }
+.secondary-btn { background: rgba(255,255,255,.1); color: white; border: 1px solid rgba(255,255,255,.12); }
+.primary-btn:hover, .secondary-btn:hover { transform: translateY(-1px); filter: brightness(1.08); }
+.status-card { padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+.status-card h2 { margin: 0; font-size: 1.5rem; }
+.status-card p { margin: 0; color: #94a3b8; }
+.status-card code { display: block; padding: 12px; background: rgba(2,6,23,.7); border: 1px solid rgba(255,255,255,.08); border-radius: 14px; overflow: auto; }
+.pulse-icon { width: 66px; height: 66px; display: grid; place-items: center; border-radius: 22px; background: rgba(34,197,94,.14); color: #86efac; }
+.feature-row { display: flex; align-items: center; gap: 8px; color: #dbeafe; font-size: .95rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.mini-card { padding: 22px; }
+.mini-card svg { color: #93c5fd; }
+.mini-card h3 { margin: 12px 0 6px; }
+.mini-card p { margin: 0; color: #cbd5e1; line-height: 1.55; }
+.glass-card { padding: 26px; margin-bottom: 20px; }
+.glass-card.narrow { max-width: 520px; }
+.text-center { text-align: center; }
+.section-title { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 18px; }
+.section-title svg { color: #67e8f9; margin-top: 4px; }
+.section-title h2 { margin: 0 0 4px; font-size: 1.45rem; }
+.section-title p { margin: 0; color: #94a3b8; }
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.join-form { display: grid; grid-template-columns: 1fr 240px auto; gap: 14px; align-items: end; }
+label { display: grid; gap: 7px; color: #cbd5e1; font-weight: 800; font-size: .92rem; margin-bottom: 14px; }
+input, textarea, select { width: 100%; border: 1px solid rgba(255,255,255,.13); background: rgba(2,6,23,.72); color: white; border-radius: 14px; padding: 12px 13px; outline: none; }
+textarea { min-height: 110px; resize: vertical; }
+input:focus, textarea:focus, select:focus { border-color: #38bdf8; box-shadow: 0 0 0 4px rgba(56,189,248,.12); }
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: rgba(15,23,42,.95); border: 1px solid rgba(255,255,255,.12); padding: 14px 18px; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,.35); color: #e0f2fe; max-width: min(680px, calc(100% - 32px)); }
+
+@media (max-width: 860px) {
+  .hero, .grid-3, .form-grid, .join-form { grid-template-columns: 1fr; }
+  .hero-copy { padding: 28px; }
+}
